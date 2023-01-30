@@ -1,164 +1,705 @@
-Program to read a number from the user and print whether it is positive or negative.
+AIM1: Program to read a number from the user and print whether it is positive or negative.
+
+
 
 import java.util.Scanner;  
+
 public class PositiveOrNegative 
+
 {  
+
 public static void main(String[] args)   
+
 {  
+
 int num;  
+
 Scanner sc = new Scanner(System.in);  
+
 System.out.print("Input: ");  
+
 num = sc.nextInt();  
+
 if(num>0)  
+
 {  
+
 System.out.println("The Input is +ve");  
+
 }  
+
 else if(num<0)  
+
 {  
+
 System.out.println("The Input is -ve");  
+
 }  
+
 else  
+
 {  
+
 System.out.println("The Input is zero");  
+
 }  
+
 }  
+
 }
 
+
+
 Output:
+
 Enter a number: -69
+
 The number is negative.
 
+
+
 Enter a number: 69
+
 The number is positive.
 
-Program to solve quadratic equations (use if, else if and else).
+
+
+AIM2: Program to solve quadratic equations (use if, else if and else).
+
+
 
 import java.util.Scanner;
+
 public class QuadraticEquation {
 
+
+
     
+
   public static void main(String[] Strings) {
+
+
 
         Scanner input = new Scanner(System.in);
 
+
+
             System.out.print("Input a: ");
+
             double a = input.nextDouble();
+
             System.out.print("Input b: ");
+
             double b = input.nextDouble();
+
             System.out.print("Input c: ");
+
             double c = input.nextDouble();
+
+
 
             double result = b * b - 4.0 * a * c;
 
+
+
             if (result > 0.0) {
+
                 double r1 = (-b + Math.pow(result, 0.5)) / (2.0 * a);
+
                 double r2 = (-b - Math.pow(result, 0.5)) / (2.0 * a);
+
                 System.out.println("The roots are " + r1 + " and " + r2);
+
             } else if (result == 0.0) {
+
                 double r1 = -b / (2.0 * a);
+
                 System.out.println("The root is " + r1);
+
             } else {
+
                 System.out.println("The equation has no real roots.");
+
             }
 
+
+
     }
+
 }
 
+
+
 Output:
+
 Input a: 1
+
 Input b: 4
+
 Input c: 4
+
 The root is -2.0
 
+
+
 Input a: 5
+
 Input b: 24
+
 Input c: 32
+
 The equation has no real roots.
 
-Take three numbers from the user and print the greatest number.
+
+
+AIM3: Take three numbers from the user and print the greatest number.
+
+
 
 import java.util.Scanner;
+
 public class GreatestNum {
 
-    
   public static void main(String[] args) {
+
   Scanner in = new Scanner(System.in);
+
    
+
   System.out.print("Input 1: ");
+
   int num1 = in.nextInt();
+
    
+
   System.out.print("Input 2: ");
+
   int num2 = in.nextInt();
+
    
+
   System.out.print("Input 3: ");
+
   int num3 = in.nextInt();
+
    
+
    
+
   if (num1 > num2)
+
    if (num1 > num3)
+
     System.out.println("The greatest: " + num1);
+
    
+
   if (num2 > num1)
+
    if (num2 > num3)
+
     System.out.println("The greatest: " + num2);
+
    
+
   if (num3 > num1)
+
    if (num3 > num2)
+
     System.out.println("The greatest: " + num3);
+
  }
+
 }
 
+
+
 Output:
+
 Input 1: 24
+
 Input 2: 69
+
 Input 3: 45
+
 The greatest: 69
 
+
+
 Input 1: 1000
+
 Input 2: 985
+
 Input 3: 1010
+
 The greatest: 1010
 
-Program that keeps a number from the user and generates an integer between 1 and 7
+
+
+AIM4: Program that keeps a number from the user and generates an integer between 1 and 7
+
 and displays the name of the weekday.
 
+
+
 import java.util.Scanner;
+
 public class DAYinaWEEK {
 
+
+
     
+
   public static void main(String[] args)
+
     {
+
         Scanner in = new Scanner(System.in);
+
         System.out.print("Number: ");
+
         int day = in.nextInt();
 
+
+
         System.out.println(getDayName(day));
+
     }
+
+
 
     public static String getDayName(int day) {
+
         String dayName = "";
+
         switch (day) {
+
             case 1: dayName = "Monday"; break;
+
             case 2: dayName = "Tuesday"; break;
+
             case 3: dayName = "Wednesday"; break;
+
             case 4: dayName = "Thursday"; break;
+
             case 5: dayName = "Friday"; break;
+
             case 6: dayName = "Saturday"; break;
+
             case 7: dayName = "Sunday"; break;
+
             default:dayName = "Invalid day range";
+
         }
 
+
+
         return dayName;
+
     }
+
 }
 
+
+
 Output:
+
 Number: 5
+
 Friday
 
+
+
 Number: 1
+
 Monday
 
-. Program that reads in two floating-point numbers and tests whether they are the same up
-to three decimal places.
 
+
+AIM5: program that reads in two floating point numbers and test whether they are the same upto three decimal places
+
+
+
+import java.util.Scanner;
+
+public class Same3decimal {
+
+public static void main(String[] args)
+
+    {
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Input number: ");
+
+        double x = in.nextDouble();
+
+        System.out.print("Input number: ");
+
+        double y = in.nextDouble();
+
+        x = Math.round(x * 1000);
+
+        x = x / 1000;
+
+        y = Math.round(y * 1000);
+
+        y = y / 1000;
+
+        if (x == y)
+
+        {
+
+            System.out.println("They are the same up to three decimal places");
+
+        }
+
+        else
+
+        {
+
+            System.out.println("They are not same up to three decimal places");
+
+        }
+
+    }
+
+}
+
+
+
+OUTPUT: 
+
+
+
+Input number: 5.267
+
+Input number: 5.2678
+
+They are same up to three decimal places
+
+
+
+Input number: 6.254
+
+Input number: 6.459
+
+They are not same up to three decimal places
+
+
+
+AIM6:  Program that takes a year from user and print whether that year is a leap year or not
+
+import java.util.Scanner;
+
+public class Leapyear {
+
+public static void main(String[] args) {
+
+Scanner in = new Scanner(System.in);
+
+System.out.print("Enter the year: "); int year = in.nextInt();
+
+boolean x = (year % 4) == 0;
+
+boolean y = (year % 100) != 0;
+
+boolean z = ((year % 100 == 0) && (year % 400 == 0));
+
+if (x && (y || z)) {
+
+System.out.println("The given year is a leap year"); }
+
+else {
+
+System.out.println("The given year is not a leap year"); }
+
+} 
+
+}
+
+
+
+OUTPUT; 
+
+
+
+Enter the year: 2080
+
+The given year is a leap year
+
+
+
+Enter the year: 2045
+
+The given year is not a leap year
+
+
+
+AIM7: Program to display the first 10 natural numbers.
+
+public class Naturalnumbers {
+
+public static void main(String[] args) {
+
+int i;
+
+System.out.println ("The first ten natural numbers are:\n"); for (i=1;i<=10;i++)
+
+{
+
+System.out.println (i); }
+
+System.out.println ("\n"); }
+
+}
+
+
+
+OUTPUT: 
+
+
+
+The first ten natural numbers are:
+
+
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+
+
+AIM8: Program to input 5 numbers from keyboard and find their sum and average.
+
+import java.util.Scanner;
+
+public class sumandavg {
+
+public static void main(String[] args)
+
+{       
+
+int i,n=0,s=0;
+
+double avg;
+
+{
+
+System.out.println("Input any 5 numbers : ");
+
+    
+
+}
+
+for (i=0;i<5;i++)
+
+{
+
+Scanner in = new Scanner(System.in);
+
+n = in.nextInt();
+
+s +=n;
+
+}
+
+avg=s/5;
+
+System.out.println("The sum of 5 no is : " +s+"\nThe Average is : " +avg);
+
+}
+
+}
+
+
+
+OUTPUT:
+
+Input any 5 numbers : 
+
+52
+
+63
+
+97
+
+53
+
+12
+
+The sum of 5 no is : 277
+
+The Average is : 55.0
+
+Input any 5 numbers : 
+
+69
+
+32
+
+18
+
+76
+
+88
+
+The sum of 5 no is : 213
+
+The Average is : 42.0
+
+
+
+AIM9: Program in Java to display the multiplication table of a given integer.
+
+import java.util.Scanner;
+
+public class Tables  {
+
+public static void main(String[] args)
+
+{
+
+int j,n;
+
+System.out.print("Input the number(Table to be calculated): "); {
+
+System.out.print("Input number of terms : "); Scanner in = new Scanner(System.in);
+
+n = in.nextInt();
+
+System.out.println ("\n"); for(j=0;j<=n;j++)
+
+System.out.println(n+" X "+j+" = " +n*j); }
+
+} 
+
+}
+
+
+
+OUTPUT:
+
+
+
+Input the number(Table to be calculated): Input number of terms : 6
+
+6 X 0 = 06 X 1 = 6
+
+6 X 2 = 12
+
+6 X 3 = 18
+
+6 X 4 = 24
+
+6 X 5 = 30
+
+6 X 6 = 36
+
+
+
+Input the number(Table to be calculated): Input number of terms : 9
+
+9 X 0 = 0
+
+9 X 1 = 9
+
+9 X 2 = 18
+
+9 X 3 = 27
+
+9 X 4 = 36
+
+9 X 5 = 45
+
+9 X 6 = 54
+
+9 X 7 = 63
+
+9 X 8 = 72
+
+9 X 9 = 81
+
+
+
+AIM10: Program in Java to display the pattern like right angle triangle with a number.
+
+import java.util.Scanner; 
+
+public class RightangleTriangle {
+
+public static void main(String[] args)
+
+{
+
+int i,j,n;
+
+System.out.print("Input number of rows : "); Scanner in = new Scanner(System.in);
+
+n = in.nextInt();
+
+for(i=1;i<=n;i++) {
+
+for(j=1;j<=i;j++) System.out.print(j);
+
+System.out.println("");
+
+}
+
+}
+
+}
+
+OUTPUT:
+
+
+
+Input number of rows : 6
+
+1
+
+12
+
+123
+
+1234
+
+12345
+
+123456
+
+
+
+Input number of rows : 9
+
+112
+
+123
+
+1234
+
+12345
+
+123456
+
+1234567
+
+12345678
+
+123456789
