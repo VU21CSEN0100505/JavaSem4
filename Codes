@@ -1,0 +1,164 @@
+Program to read a number from the user and print whether it is positive or negative.
+
+import java.util.Scanner;  
+public class PositiveOrNegative 
+{  
+public static void main(String[] args)   
+{  
+int num;  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Input: ");  
+num = sc.nextInt();  
+if(num>0)  
+{  
+System.out.println("The Input is +ve");  
+}  
+else if(num<0)  
+{  
+System.out.println("The Input is -ve");  
+}  
+else  
+{  
+System.out.println("The Input is zero");  
+}  
+}  
+}
+
+Output:
+Enter a number: -69
+The number is negative.
+
+Enter a number: 69
+The number is positive.
+
+Program to solve quadratic equations (use if, else if and else).
+
+import java.util.Scanner;
+public class QuadraticEquation {
+
+    
+  public static void main(String[] Strings) {
+
+        Scanner input = new Scanner(System.in);
+
+            System.out.print("Input a: ");
+            double a = input.nextDouble();
+            System.out.print("Input b: ");
+            double b = input.nextDouble();
+            System.out.print("Input c: ");
+            double c = input.nextDouble();
+
+            double result = b * b - 4.0 * a * c;
+
+            if (result > 0.0) {
+                double r1 = (-b + Math.pow(result, 0.5)) / (2.0 * a);
+                double r2 = (-b - Math.pow(result, 0.5)) / (2.0 * a);
+                System.out.println("The roots are " + r1 + " and " + r2);
+            } else if (result == 0.0) {
+                double r1 = -b / (2.0 * a);
+                System.out.println("The root is " + r1);
+            } else {
+                System.out.println("The equation has no real roots.");
+            }
+
+    }
+}
+
+Output:
+Input a: 1
+Input b: 4
+Input c: 4
+The root is -2.0
+
+Input a: 5
+Input b: 24
+Input c: 32
+The equation has no real roots.
+
+Take three numbers from the user and print the greatest number.
+
+import java.util.Scanner;
+public class GreatestNum {
+
+    
+  public static void main(String[] args) {
+  Scanner in = new Scanner(System.in);
+   
+  System.out.print("Input 1: ");
+  int num1 = in.nextInt();
+   
+  System.out.print("Input 2: ");
+  int num2 = in.nextInt();
+   
+  System.out.print("Input 3: ");
+  int num3 = in.nextInt();
+   
+   
+  if (num1 > num2)
+   if (num1 > num3)
+    System.out.println("The greatest: " + num1);
+   
+  if (num2 > num1)
+   if (num2 > num3)
+    System.out.println("The greatest: " + num2);
+   
+  if (num3 > num1)
+   if (num3 > num2)
+    System.out.println("The greatest: " + num3);
+ }
+}
+
+Output:
+Input 1: 24
+Input 2: 69
+Input 3: 45
+The greatest: 69
+
+Input 1: 1000
+Input 2: 985
+Input 3: 1010
+The greatest: 1010
+
+Program that keeps a number from the user and generates an integer between 1 and 7
+and displays the name of the weekday.
+
+import java.util.Scanner;
+public class DAYinaWEEK {
+
+    
+  public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Number: ");
+        int day = in.nextInt();
+
+        System.out.println(getDayName(day));
+    }
+
+    public static String getDayName(int day) {
+        String dayName = "";
+        switch (day) {
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+            default:dayName = "Invalid day range";
+        }
+
+        return dayName;
+    }
+}
+
+Output:
+Number: 5
+Friday
+
+Number: 1
+Monday
+
+. Program that reads in two floating-point numbers and tests whether they are the same up
+to three decimal places.
+
