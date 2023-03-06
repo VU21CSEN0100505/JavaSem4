@@ -12,3 +12,64 @@ void compare (String, String)
 9. How to pass the variable length arguments in java, illustrate with an example program. 
 10. Write a java program to overload the constructors. 
 11. Read the command line arguments and print the total number of arguments and itsvalues. 
+
+
+Aim 1: Program to read two numbers and perform the arithmetic operations using methods.
+import java.util.Scanner;
+
+public class AriOps {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("Sum: " + add(num1, num2));
+        System.out.println("Difference: " + subtract(num1, num2));
+        System.out.println("Product: " + multiply(num1, num2));
+        double quotient = divide(num1, num2);
+        if (quotient != Double.NaN) {
+            System.out.println("Quotient: " + quotient);
+        } else {
+            System.out.println("Error: Cannot divide by zero");
+        }
+    }
+
+    public static double add(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
+        if (b == 0) {
+            return Double.NaN; 
+        } else {
+            return a / b;
+        }
+    }
+}
+OUTPUT:
+Enter the first number: 69
+Enter the second number: 96
+Sum: 165.0
+Difference: -27.0
+Product: 6624.0
+Quotient: 0.71875
+Enter the first number: 121
+Enter the second number: 212
+Sum: 333.0
+Difference: -91.0
+Product: 25652.0
+Quotient: 0.5707547169811321
+
+
+Aim 2: Program that performs arithmetic operations with values of type char.
