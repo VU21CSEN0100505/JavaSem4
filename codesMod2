@@ -1,0 +1,14 @@
+1. Program to read two numbers and perform the arithmetic operations using methods. 
+2. Program that performs arithmetic operations with values of type char. 
+3. Design a class to overload a method compare() to return the greater of two as follows: 
+void compare ( int, int) 
+void compare (char, char) 
+void compare (String, String) 
+4. Program that creates a class Account that stores a variable balance. The class has methods to start account, to deposit money, to withdraw money and tell the current balance amount. 
+5. Program to implement a Book class that stores the details of a book such as its code, title and price (Use constructors to initialize the objects). 
+6. Differentiate between static and non-static methods in java. 
+7. Illustrate the usage of ‘this’, ‘final’ and ‘finalize’ using a java program. 
+8. Write a java program to implement the concept of dynamic method dispatch 
+9. How to pass the variable length arguments in java, illustrate with an example program. 
+10. Write a java program to overload the constructors. 
+11. Read the command line arguments and print the total number of arguments and itsvalues. 
