@@ -72,4 +72,836 @@ Product: 25652.0
 Quotient: 0.5707547169811321
 
 
-Aim 2: Program that performs arithmetic operations with values of type char.
+Aim 1:  Program to read two numbers and perform the arithmetic operations using methods.
+
+
+
+import java.util.Scanner;
+
+
+
+public class ArithOps {
+
+
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+
+        System.out.print("Enter the first number: ");
+
+        int num1 = input.nextInt();
+
+
+
+        System.out.print("Enter the second number: ");
+
+        int num2 = input.nextInt();
+
+
+
+        System.out.println("Sum: " + add(num1, num2));
+
+        
+
+        System.out.println("Difference: " + subtract(num1, num2));
+
+        
+
+        System.out.println("Product: " + multiply(num1, num2));
+
+        
+
+        System.out.println("Quotient: " + divide(num1, num2));
+
+        
+
+    }
+
+
+
+    public static int add(int num1, int num2) {
+
+        return num1 + num2;
+
+    }
+
+
+
+    public static int subtract(int num1, int num2) {
+
+        return num1 - num2;
+
+    }
+
+
+
+    public static int multiply(int num1, int num2) {
+
+        return num1 * num2;
+
+    }
+
+
+
+    public static double divide(int num1, int num2) {
+
+        return (double) num1 / num2;
+
+    }
+
+}
+
+
+
+OUTPUT:
+
+Enter the first number: 69
+
+Enter the second number: 96
+
+Sum: 165.0
+
+Difference: -27.0
+
+Product: 6624.0
+
+Quotient: 0.71875
+
+
+
+Enter the first number: 121
+
+Enter the second number: 212
+
+Sum: 333.0
+
+Difference: -91.0
+
+Product: 25652.0
+
+Quotient: 0.5707547169811321
+
+
+
+Aim 2: Program that performs arithmetic operations with values of type char. 
+
+
+
+public class CharOps {
+
+    public static void main(String[] args) {
+
+        char char1 = 'a';
+
+        char char2 = 'b';
+
+
+
+        int num1 = (int) char1;
+
+        int num2 = (int) char2;
+
+
+
+        int sum = num1 + num2;
+
+        int difference = num2 - num1;
+
+        int product = num1 * num2;
+
+        int quotient = num1 != 0 ? num2 / num1 : 0;
+
+
+
+        char resultSum = (char) sum;
+
+        char resultDifference = (char) difference;
+
+        char resultProduct = (char) product;
+
+        char resultQuotient = (char) quotient;
+
+
+
+        System.out.println("Sum: " + resultSum);
+
+        System.out.println("Difference: " + resultDifference);
+
+        System.out.println("Product: " + resultProduct);
+
+        System.out.println("Quotient: " + resultQuotient);
+
+    }
+
+}
+
+
+
+Output:
+
+Sum: c
+
+Difference: 1
+
+Product: `
+
+Quotient: 
+
+
+
+Sum: î 
+
+Difference: z 
+
+Product: ¸ 
+
+Quotient: z
+
+
+
+Aim 3:  Design a class to overload a method compare() to return the greater of two as follows:  
+
+            void compare ( int, int) 
+
+            void compare (char, char) 
+
+            void compare (String, String)
+
+
+
+public class Comparisonmethods {
+
+    public void compare(int a, int b) {
+
+        if (a > b) {
+
+            System.out.println(a + " is greater than " + b);
+
+        } else if (a < b) {
+
+            System.out.println(b + " is greater than " + a);
+
+        } else {
+
+            System.out.println(a + " and " + b + " are equal");
+
+        }
+
+    }
+
+
+
+    public void compare(char a, char b) {
+
+        if (a > b) {
+
+            System.out.println(a + " is greater than " + b);
+
+        } else if (a < b) {
+
+            System.out.println(b + " is greater than " + a);
+
+        } else {
+
+            System.out.println(a + " and " + b + " are equal");
+
+        }
+
+    }
+
+
+
+    public void compare(String a, String b) {
+
+        if (a.compareTo(b) > 0) {
+
+            System.out.println(a + " is greater than " + b);
+
+        } else if (a.compareTo(b) < 0) {
+
+            System.out.println(b + " is greater than " + a);
+
+        } else {
+
+            System.out.println(a + " and " + b + " are equal");
+
+        }
+
+    }
+
+}
+
+
+
+Output:
+
+obj.compare(5, 10);
+
+obj.compare('a', 'z'); 
+
+obj.compare("hello", "world"); 
+
+
+
+obj.compare(50, 20); 
+
+obj.compare('z', 'a'); 
+
+obj.compare("world", "hello"); 
+
+
+
+Aim 4:  Program that creates a class Account that stores a variable balance. The class has methods   to start account, to deposit money, to withdraw money and tell the current balance amount.
+
+
+
+public class Account {
+
+    private double balance;
+
+
+
+    public void startAccount(double initialBalance) {
+
+        balance = initialBalance;
+
+    }
+
+
+
+    public void deposit(double amount) {
+
+        balance += amount;
+
+        System.out.println("Deposited " + amount + " successfully");
+
+    }
+
+
+
+    public void withdraw(double amount) {
+
+        if (balance < amount) {
+
+            System.out.println("Withdrawal failed. Insufficient balance.");
+
+        } else {
+
+            balance -= amount;
+
+            System.out.println("Withdrawn " + amount + " successfully");
+
+        }
+
+    }
+
+
+
+    public double getBalance() {
+
+        return balance;
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Account myAccount = new Account();
+
+        myAccount.startAccount(1000.0);
+
+        System.out.println("Current balance: " + myAccount.getBalance());
+
+
+
+        myAccount.deposit(500.0);
+
+        System.out.println("Current balance: " + myAccount.getBalance());
+
+
+
+        myAccount.withdraw(200.0);
+
+        System.out.println("Current balance: " + myAccount.getBalance());
+
+
+
+        myAccount.withdraw(1500.0);
+
+        System.out.println("Current balance: " + myAccount.getBalance());
+
+    }
+
+}
+
+
+
+Output: 
+
+Current balance: 1000.0
+
+Deposited 500.0 successfully
+
+Current balance: 1500.0
+
+Withdrawn 200.0 successfully
+
+Current balance: 1300.0
+
+Withdrawal failed. Insufficient balance.
+
+Current balance: 1300.0
+
+
+
+Aim 5:  Program to implement a Book class that stores the details of a book such as its code, title and price (Use constructors to initialize the objects).
+
+
+public class Book {
+
+    private String code;
+
+    private String title;
+
+    private double price;
+
+
+
+    public Book(String code, String title, double price) {
+
+        this.code = code;
+
+        this.title = title;
+
+        this.price = price;
+
+    }
+
+
+
+    public String getCode() {
+
+        return code;
+
+    }
+
+
+
+    public String getTitle() {
+
+        return title;
+
+    }
+
+
+
+    public double getPrice() {
+
+        return price;
+
+    }
+
+
+
+    public void setCode(String code) {
+
+        this.code = code;
+
+    }
+
+
+
+    public void setTitle(String title) {
+
+        this.title = title;
+
+    }
+
+
+
+    public void setPrice(double price) {
+
+        this.price = price;
+
+    }
+
+}
+
+Output:
+
+Book myBook = new Book("B001", "The Great Gatsby", 12.99);
+
+System.out.println("Code: " + myBook.getCode());
+
+System.out.println("Title: " + myBook.getTitle());
+
+System.out.println("Price: $" + myBook.getPrice());
+
+Code: B001
+
+Title: The Great Gatsby
+
+Price: $12.99
+
+
+
+Aim 6:  Differentiate between static and non-static methods in java.
+
+
+
+Static methods belong to a class rather than an instance of the class. The static keyword identifies them in their method signature. Static methods can be called directly on the class itself without creating an instance of the class. Because they don't depend on instance variables, they cannot access or modify non-static fields of the class. Static methods are often used for utility functions or tasks that do not require instance-specific information.
+
+Non-static methods also called instance methods, operate on an instance of a class. They are not marked with the static keyword in their method signature. Instance methods can access and modify the non-static fields of an object, and they can also call other non-static methods of the class. Instance methods can be called only on an instance of the course and cannot be called directly on the class itself.
+
+
+Aim 7: Illustrate the usage of ‘this’, ‘final’ and ‘finalize’ using a java program. 
+
+
+
+public class MyClass {
+
+    private final int id;
+
+    private String name;
+
+    
+
+    public MyClass(int id, String name) {
+
+        this.id = id;
+
+        this.name = name;
+
+    }
+
+    
+
+    public void setName(String name) {
+
+        this.name = name;
+
+    }
+
+    
+
+    public void printDetails() {
+
+        System.out.println("ID: " + this.id);
+
+        System.out.println("Name: " + this.name);
+
+    }
+
+    
+
+    protected void finalize() throws Throwable {
+
+        System.out.println("Object with ID " + this.id + " is being garbage collected.");
+
+        super.finalize();
+
+    }
+
+    
+
+    public static void main(String[] args) {
+
+        MyClass obj1 = new MyClass(1, "John");
+
+        MyClass obj2 = new MyClass(2, "Jane");
+
+        
+
+        obj1.printDetails();
+
+        obj2.printDetails();
+
+        
+
+        obj1.setName("Mike");
+
+        obj1.printDetails();
+
+        
+
+        obj1 = null;
+
+        obj2 = null;
+
+        System.gc();
+
+    }
+
+}
+
+Output: 
+
+ID: 1
+
+Name: John
+
+ID: 2
+
+Name: Jane
+
+ID: 1
+
+Name: Mike
+
+Object with ID 1 is being garbage collected.
+
+Object with ID 2 is being garbage collected.
+
+
+
+Aim 8: Write a java program to implement the concept of dynamic method dispatch 
+
+
+
+class Animal {
+
+    public void speak() {
+
+        System.out.println("Animal is speaking");
+
+    }
+
+}
+
+
+
+class Dog extends Animal {
+
+    public void speak() {
+
+        System.out.println("Dog is barking");
+
+    }
+
+}
+
+
+
+class Cat extends Animal {
+
+    public void speak() {
+
+        System.out.println("Cat is meowing");
+
+    }
+
+}
+
+
+
+public class DynamicDispatchExample {
+
+    public static void main(String[] args) {
+
+        Animal animal1 = new Animal();
+
+        Animal animal2 = new Dog();
+
+        Animal animal3 = new Cat();
+
+
+
+        animal1.speak();
+
+        animal2.speak();
+
+        animal3.speak();
+
+    }
+
+}
+
+
+
+Output: 
+
+Animal is speaking
+
+Dog is barking
+
+Cat is meowing
+
+
+
+Aim 9:  How to pass the variable length arguments in java, illustrate with an example program. 
+
+
+
+public class VariableArgumentsExample {
+
+   public static void main(String[] args) {
+
+      displayNumbers("Numbers: ", 1, 2, 3, 4, 5);
+
+      displayNumbers("More Numbers: ", 10, 20, 30, 40);
+
+   }
+
+
+
+   public static void displayNumbers(String message, int... numbers) {
+
+      System.out.print(message);
+
+      for (int number : numbers) {
+
+         System.out.print(number + " ");
+
+      }
+
+      System.out.println();
+
+   }
+
+}
+
+
+
+Output: 
+
+Numbers: 1 2 3 4 5 
+
+More Numbers: 10 20 30 40 
+
+
+
+Aim 10:  Write a java program to overload the constructors. 
+
+
+
+public class Rectangle {
+
+    private double length;
+
+    private double width;
+
+
+
+    public Rectangle() {
+
+        this.length = 0.0;
+
+        this.width = 0.0;
+
+    }
+
+
+
+    public Rectangle(double length, double width) {
+
+        this.length = length;
+
+        this.width = width;
+
+    }
+
+
+
+    public Rectangle(double length) {
+
+        this.length = length;
+
+        this.width = 0.0;
+
+    }
+
+
+
+    public Rectangle(int width) {
+
+        this.length = 0.0;
+
+        this.width = width;
+
+    }
+
+
+
+    public double area() {
+
+        return length * width;
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Rectangle rect1 = new Rectangle();
+
+        Rectangle rect2 = new Rectangle(5.0, 3.0);
+
+        Rectangle rect3 = new Rectangle(4.0);
+
+        Rectangle rect4 = new Rectangle(2);
+
+
+
+        System.out.println("Rectangle 1 Area: " + rect1.area());
+
+        System.out.println("Rectangle 2 Area: " + rect2.area());
+
+        System.out.println("Rectangle 3 Area: " + rect3.area());
+
+        System.out.println("Rectangle 4 Area: " + rect4.area());
+
+    }
+
+}
+
+
+
+Output: 
+
+Rectangle 1 Area: 0.0 
+
+Rectangle 2 Area: 15.0 
+
+Rectangle 3 Area: 0.0 
+
+Rectangle 4 Area: 0.0
+
+
+
+Aim11:  Read the command line arguments and print the total number of arguments and itsvalues. 
+
+public class CommandLineArguments {
+
+    public static void main(String[] args) {
+
+
+        System.out.println("Total number of arguments: " + args.length);
+
+        
+
+
+        for (int i = 0; i < args.length; i++) {
+
+            System.out.println("Argument " + (i + 1) + ": " + args[i]);
+
+        }
+
+    }
+
+}
+
+
+
+Output:
+
+Total number of arguments: 3 
+
+Argument 1: apple 
+
+Argument 2: banana 
+
+Argument 3: cherry
